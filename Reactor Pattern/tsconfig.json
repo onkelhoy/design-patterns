@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "baseUrl": "./src",
+    "strict": true,
+    "noImplicitAny": true,
+    "module": "node12",
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationDir": "declerations"
+  },
+  "compileOnSave": true,
+  "exclude": ["node_modules/", "build/"]
+}
