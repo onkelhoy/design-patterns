@@ -3,7 +3,7 @@ interface IEvent {
   callbacks: Function[];
 }
 
-class Reactor {
+export class Reactor {
   events!: Map<string, IEvent>;
   private static instance: Reactor;
 
@@ -14,7 +14,7 @@ class Reactor {
     Reactor.instance = this;
   }
 
-  Register (name: string) {
+  register (name: string) {
     const event:IEvent = {
       name,
       callbacks: [],

@@ -4,7 +4,8 @@
     "baseUrl": "./src",
     "strict": true,
     "noImplicitAny": true,
-    "module": "node12",
+    "module": "CommonJS",
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "declaration": true,
     "declarationDir": "declerations"
