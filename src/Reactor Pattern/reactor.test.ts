@@ -21,11 +21,15 @@ describe('Reactor Pattern', () => {
   });
 
   it("dispatch event", async () => {
-    let comp = -1;
+    let comp = 0;
     instance.register("foo");
-    instance.addEventListener("foo", (value:number) => comp = value);
+    for (let i=0; i<10; i++) {
+      instance.addEventListener("foo", (value:number) => {
+        comp+=value;
+      });
+    }
     instance.disptatch("foo", 5);
 
-    expect(comp).toBe(5);
+    expect(comp).toBe(50);
   })
 });
